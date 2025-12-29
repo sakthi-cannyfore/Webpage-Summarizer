@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resultDiv.innerHTML = `<div clas="loader"></div>`;
 
-  //step -1 get the api key
   chrome.storage.sync.get(["geminiApiKey"], (data) => {
     if (!data.geminiApiKey) {
       resultDiv.textContent = "NO Api key set ";
