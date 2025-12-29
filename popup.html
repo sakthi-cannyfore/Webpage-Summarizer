@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Summariser</title>
+
+    <style>
+        body {
+            min-width: 360px;
+            padding: 12px;
+            border: 2px orange;
+
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafaf9;
+            color: #1f2937;
+        }
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ea580c;
+            text-align: center;
+        }
+
+        select {
+            width: 100%;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid #fed7aa;
+            margin-bottom: 8px;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        #summarize {
+            background: #ea580c;
+            color: white;
+        }
+
+        #summarize:hover {
+            background: #c2410c;
+        }
+
+        #copy-btn {
+            background: #fff;
+            border: 1px solid #ea580c;
+            color: #ea580c;
+        }
+
+        #copy-btn:hover {
+            background: #ffedd5;
+        }
+
+        pre {
+            margin-top: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 12px;
+            white-space: pre-wrap;
+            overflow-y: auto;
+            border: 1px solid #fed7aa;
+        }
+
+        .loader {
+            border: 4px solid orange;
+            border-top: 4px solid orange;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <select name=" summary" id="summary-type">
+        <option value="brief">Brief</option>
+        <option value="detailed">Detailed</option>
+        <option value="bullets">Bullet Points</option>
+    </select>
+
+    <button id="summarize">Summarize</button>
+    <button id="copy-btn">Copy</button>
+
+    <pre id="result">Select a type and click Summarize Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui distinctio nostrum quae nobis minima eaque. Nostrum molestiae voluptates doloribus porro cum inventore voluptatum ex molestias quos natus? Dignissimos quisquam sunt consequatur obcaecati molestias, commodi possimus, quas facere nihil cumque qui quos in? Incidunt maiores pariatur excepturi accusantium qui facilis porro sapiente illo expedita distinctio voluptatibus magnam ea quaerat reprehenderit, debitis inventore quos culpa voluptatum itaque! Ducimus hic dolorem quia sed itaque, saepe minus doloremque placeat? Earum quidem tenetur ullam incidunt veniam est! Voluptatem magnam quas, ducimus facilis voluptate temporibus in nam iste numquam velit nulla eos fugiat explicabo nostrum fuga.
+
+    </pre>
+    <script src="popup.js"></script>
+</body>
+
+</html>
